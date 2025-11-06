@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Двурушник AI Chat</title>
+<title>Двурушник AI</title>
 <style>
 :root {
     --bg-main: #1C1C28; 
@@ -510,7 +510,7 @@ body, html {
                     </label>
                     
                     <div class="input-text-wrapper">
-                        <textarea id="message-input" class="chat-input" placeholder="Спроси, или прикрепи фото, я всегда работаю на два фронта..." required rows="1"></textarea>
+                        <textarea id="message-input" class="chat-input" placeholder="Пиши..." required rows="1"></textarea>
                         
                         <button type="submit" class="neomorph-btn neomorph-primary" title="Отправить">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
@@ -719,8 +719,8 @@ function handleSwitchChat(chatId) {
 function handleNewChat(isInit = false) {
     const newId = `chat_${Date.now()}`;
     const initialMessage = isInit 
-        ? 'Привет! Я Двурушник, я всегда найду две стороны медали. Задавай свой **стильный** вопрос.'
-        : 'Новый раунд? Хорошо. Начинай, но не жди, что я буду на твоей стороне. 😉';
+        ? 'Привет! Я Двурушник, я люблю меллстроя'
+        : 'ам ам ам';
         
     allChats[newId] = [
         { role: 'assistant', content: initialMessage }
@@ -738,7 +738,7 @@ function handleNewChat(isInit = false) {
  * Удаление чата
  */
 function handleDeleteChat(chatId) {
-    if (!confirm('Двурушник одобряет удаление. Точно?')) {
+    if (!confirm('Двурушник расстроен что ты удаляешь такой крутой чат. Точно?')) {
         return;
     }
     
