@@ -720,7 +720,7 @@ function handleNewChat(isInit = false) {
     const newId = `chat_${Date.now()}`;
     const initialMessage = isInit 
         ? 'Привет! Я Двурушник, я люблю меллстроя'
-        : 'ам ам ам';
+        : 'ам ам ам новый вопрос?';
         
     allChats[newId] = [
         { role: 'assistant', content: initialMessage }
